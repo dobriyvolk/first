@@ -1,0 +1,66 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+* {
+    font-family: sans-serif;
+}
+span, a {
+    display: inline-block;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+.form {
+    border: 5px solid blue;
+    max-width: 600px;
+    margin: 30px auto;
+}
+.label {
+    border: 5px solid red;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 7px 15px;
+}
+.left {
+    display: inline-flex;
+    align-items: center;
+}
+.pic {
+    width: 100px;
+}
+.checkicon {
+    color: green;
+    font-size: 22px;
+    opacity: 0;
+    transition: 0.2s all linear;
+}
+.input:checked ~ .checkicon {
+    opacity: 1;
+}
+.hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    border: 0;
+    margin: -1px;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    clip: rect(0, 0, 0, 0);
+    overflow: hidden;
+}
+.span {
+    font-size: 20px;
+    margin-left: 10px;
+    color: gray;
+    text-transform: uppercase;
+    transition: 0.2s all linear;
+}
+.input:checked ~ .left .span {
+    color: black;
+}
